@@ -2,7 +2,7 @@
 
 #curl -sSL https://gh.api.99988866.xyz/https://raw.githubusercontent.com/playingapi/cloud139/main/script.sh -o script.sh && chmod +x script.sh && ./script.sh
 
-pkg instal termux-services vim tsu -y
+pkg instal termux-services tsu -y
 apt install -y wget 
 
 wget https://gh.api.99988866.xyz/https://github.com/ykxVK8yL5L/alist/releases/download/v0.0.1/alist-linux-musl-arm64.tar.gz
