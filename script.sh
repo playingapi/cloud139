@@ -8,7 +8,12 @@ apt install -y wget
 wget https://gh.api.99988866.xyz/https://github.com/ykxVK8yL5L/alist/releases/download/v0.0.1/alist-linux-musl-arm64.tar.gz
 tar -zxvf alist-linux-musl-arm64.tar.gz
 
-./alist admin set admin password
+./alist admin set admin alistpwd
+
+echo "alist:"
+echo "user: alist" 
+echo "password: alistpwd" 
+
 
 sed -i 's/5224/10002/g' data/config.json
 
