@@ -2,8 +2,7 @@
 
 #curl -sSL https://gh.api.99988866.xyz/https://raw.githubusercontent.com/playingapi/cloud139/main/script.sh -o script.sh && chmod +x script.sh && ./script.sh
 
-
-pkg instal termux-services vim -y
+pkg instal termux-services vim tsu -y
 apt install -y wget 
 
 
