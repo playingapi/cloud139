@@ -1,6 +1,6 @@
 #!/data/data/com.termux/files/usr/bin/sh
 
-#curl -sSL https://raw.githubusercontent.com/playingapi/cloud139/main/script.sh -o script.sh && chmod +x script.sh && ./script.sh
+#curl -sSL https://gh.api.99988866.xyz/https://raw.githubusercontent.com/playingapi/cloud139/main/script.sh -o script.sh && chmod +x script.sh && ./script.sh
 
 
 pkg instal termux-services vim -y
