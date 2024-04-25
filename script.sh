@@ -17,7 +17,10 @@ dpkg -i alist.deb
 
 pkill -f alist
 
-alist admin set admin
+rm -rf data
+mkdir data
+
+alist admin set admin --data ~/data
 
 echo "alist:"
 echo "user: admin" 
@@ -34,7 +37,7 @@ ln -sf $PREFIX/share/termux-services/svlogger $PREFIX/var/service/alist/log/run
 cat <<- EOF > $PREFIX/var/service/alist/run
 #!/data/data/com.termux/files/usr/bin/sh
 exec 2>&1
-cd ~ && alist server
+cd ~ && alist server --data ~/data
 EOF
 
 chmod a+x $PREFIX/var/service/alist/run
