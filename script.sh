@@ -29,7 +29,7 @@ ln -sf $PREFIX/share/termux-services/svlogger $PREFIX/var/service/alist/log/run
 cat <<- EOF > $PREFIX/var/service/alist/run
 #!/data/data/com.termux/files/usr/bin/sh
 exec 2>&1
-cd ~ && ~/alist server
+cd ~ && alist server
 EOF
 
 chmod a+x $PREFIX/var/service/alist/run
