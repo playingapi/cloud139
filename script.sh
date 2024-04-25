@@ -1,23 +1,22 @@
 #!/data/data/com.termux/files/usr/bin/sh
 
-#curl -sSL https://gh.api.99988866.xyz/https://raw.githubusercontent.com/playingapi/cloud139/main/script.sh -o script.sh && chmod +x script.sh && ./script.sh
+#curl -sSL https://mirror.ghproxy.com/https://raw.githubusercontent.com/playingapi/cloud139/main/script.sh -o script.sh && chmod +x script.sh && ./script.sh
 
 pkg instal termux-services tsu -y
 apt install -y wget 
 
-wget https://gh.api.99988866.xyz/https://github.com/ykxVK8yL5L/alist/releases/download/v0.0.1/alist-linux-musl-arm64.tar.gz
+wget https://mirror.ghproxy.com/https://github.com/ykxVK8yL5L/alist/releases/latest/download/alist-linux-musl-arm64.tar.gz
 tar -zxvf alist-linux-musl-arm64.tar.gz
 
-./alist admin set admin alistpwd
+./alist admin set admin
 
 echo "alist:"
-echo "user: alist" 
-echo "password: alistpwd" 
-
+echo "user: admin" 
+echo "password: admin" 
 
 sed -i 's/5224/10002/g' data/config.json
 
-sudo sh -c "echo 'nameserver 114.114.114.114' > /etc/resolv.conf"
+#sudo sh -c "echo 'nameserver 114.114.114.114' > /etc/resolv.conf"
 
 mkdir -p $PREFIX/var/service/alist
 mkdir -p $PREFIX/var/service/alist/log
@@ -31,4 +30,7 @@ EOF
 
 chmod a+x $PREFIX/var/service/alist/run
 
-echo "请重启termux, 再输入sv-enable alist 和 sv up alist"
+sv-enable alist
+sv up alist
+
+echo "请重启termux"
