@@ -12,7 +12,7 @@ apt install -y wget dpkg
 cd ~
 rm alist.deb
 
-wget https://mirror.ghproxy.com/https://github.com/ykxVK8yL5L/alist/releases/latest/download/alist_0.0.1_termux_aarch64.deb -O alist.deb
+wget https://mirror.ghproxy.com/https://github.com/ykxVK8yL5L/alist/releases/latest/download/alist_termux_aarch64.deb -O alist.deb
 dpkg -i alist.deb
 
 pkill -f alist
