@@ -34,11 +34,10 @@ mkdir -p $PREFIX/var/service/alist
 mkdir -p $PREFIX/var/service/alist/log
 
 ln -sf $PREFIX/share/termux-services/svlogger $PREFIX/var/service/alist/log/run
-cat <<- EOF > $PREFIX/var/service/alist/run
-#!/data/data/com.termux/files/usr/bin/sh
-exec 2>&1
-cd ~ && alist server --data ~/data
-EOF
+
+echo '#!/data/data/com.termux/files/usr/bin/sh' > $PREFIX/var/service/alist/run
+echo 'exec 2>&1' >> $PREFIX/var/service/alist/run
+echo 'cd ~ && alist server --data ~/data' >> $PREFIX/var/service/alist/run
 
 chmod a+x $PREFIX/var/service/alist/run
 
