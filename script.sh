@@ -31,7 +31,7 @@ EOF
 
 chmod a+x $PREFIX/var/service/alist/run
 
-sv-enable alist
-sv up alist
+#sv-enable alist
+#sv up alist
 
-echo "请重启termux"
+echo "请重启termux后执行 sv-enable alist 和 sv up alist"
