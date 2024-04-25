@@ -11,7 +11,7 @@ apt install -y wget dpkg
 
 cd ~
 
-wget https://mirror.ghproxy.com/https://github.com/ykxVK8yL5L/alist/releases/download/v0.0.1/alist_0.0.1_termux_aarch64.deb -O alist.deb
+wget https://mirror.ghproxy.com/https://github.com/ykxVK8yL5L/alist/releases/latest/download/alist_0.0.1_termux_aarch64.deb -O alist.deb
 dpkg -i alist.deb
 
 alist admin set admin
