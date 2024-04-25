@@ -3,12 +3,16 @@
 #curl -sSL https://mirror.ghproxy.com/https://raw.githubusercontent.com/playingapi/cloud139/main/script.sh -o script.sh && chmod +x script.sh && ./script.sh
 
 pkg instal termux-services tsu -y
-apt install -y wget 
+apt install -y wget dpkg
 
-wget https://mirror.ghproxy.com/https://github.com/ykxVK8yL5L/alist/releases/latest/download/alist-linux-musl-arm64.tar.gz
-tar -zxvf alist-linux-musl-arm64.tar.gz
+#wget https://mirror.ghproxy.com/https://github.com/ykxVK8yL5L/alist/releases/latest/download/alist-linux-musl-arm64.tar.gz
+#tar -zxvf alist-linux-musl-arm64.tar.gz
+#./alist admin set admin
 
-./alist admin set admin
+wget https://mirror.ghproxy.com/https://github.com/ykxVK8yL5L/alist/releases/download/v0.0.1/alist_0.0.1_termux_aarch64.deb -O alist.deb
+dpkg -i alist.deb
+
+alist admin set admin
 
 echo "alist:"
 echo "user: admin" 
@@ -34,4 +38,3 @@ sv-enable alist
 sv up alist
 
 echo "请重启termux后执行 sv-enable alist 和 sv up alist"
-echo "请用MT管理器修改/etc/resolv.conf,并写入nameserver 114.114.114.114"
