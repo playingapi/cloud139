@@ -30,8 +30,8 @@ EOF
 
 chmod a+x $PREFIX/var/service/alist/run
 
-#sv-enable alist
-#sv up alist
+sv-enable alist
+sv up alist
 
 echo "请重启termux后执行 sv-enable alist 和 sv up alist"
 echo "请用MT管理器修改/etc/resolv.conf,并写入nameserver 114.114.114.114"
